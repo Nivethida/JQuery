@@ -1,0 +1,29 @@
+#slide{
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0px auto;
+
+}
+#slide > img{
+    width: 600px;
+    height: 500px;
+    float: left;
+    display: none;
+}
+a{
+    padding: 5px 10px;
+    background-color: azure;
+    margin-top: 30px;
+    text-decoration: none;
+}
+.wrapper{
+    width: 600px;
+    margin: auto;
+}
+a.left{
+    float: left;
+}
+a.right{
+    float: right;
+}
