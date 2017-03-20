@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grid View Control</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+<div data-role="header">
+    <h1>Header</h1>
+</div>
+<p>Three Column Layout</p>
+<div data-role="main" class="ui-content">
+    <div class="ui-grid-b" id="div1">
+        <div class="ui-block-a" ><span>First Name</span></div>
+        <div class="ui-block-b" ><span>Last Name</span></div>
+        <div class="ui-block-c" ><span>Grade</span></div>
+        <div class="ui-block-a" ><a href="#" id="John" ><span>John</span></a></div>
+        <div class="ui-block-b" ><span>Casey</span></div>
+        <div class="ui-block-c" ><span>1</span>
+            <div id="div2" class="ui-grid-b" style="display: none">
+                <div class="ui-block-a">N2435</div>
+                <div class="ui-block-b">Winterside Circle</div>
+                <div class="ui-block-c">CA</div>
+            </div>
+        </div>
+
+        <div class="ui-block-a"><a href="#" id="Jess"><span>Jessica</span></a></div>
+        <div class="ui-block-b"><span>Alba</span></div>
+        <div class="ui-block-c"><span>2</span></div>
+
+        <div class="ui-block-a"><a href="#" id="brad"><span>Brad</span></a></div>
+        <div class="ui-block-b"><span>Pitt</span></div>
+        <div class="ui-block-c"><span>3</span></div>
+
+    </div>
+
+    <br><br>
+    <input type="text" id="1"/>
+    <input type="text" id="2"/>
+    <input type="text" id="3"/>
+    <button id="but1">Click me to add Rows</button>
+    <br><br>
+    <input type="text" id="4"/>
+    <input type="text" id="5"/>
+    <input type="text" id="6"/>
+    <button id="but2">Click me to add HEADER</button>
+    <script>
+        $("#but1").on('click', function(){
+            $("#div1").append("<div class='ui-block-a'>"+$("#1").val()+"</div><div class='ui-block-b'>"+$("#2").val()+"</div><div class='ui-block-c'>"+$("#3").val()+"</div>")
+        });
+        $("#but2").on('click', function () {
+            $("#div1").prepend("<div class='ui-block-a'>"+$("#4").val()+"</div><div class='ui-block-b'>"+$("#5").val()+"</div><div class='ui-block-c'>"+$("#6").val()+"</div>")
+        });
+        $("#John").on('click',function(){
+          $("#div2").show(1000);
+        });
+    </script>
+</div>
+</body>
+</html>
