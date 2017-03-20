@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inserting IN dom</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        function appendtext() {
+            var txt2 = $("<p></p>").text("Prepend");
+            var txt = document.createElement("p");
+            txt.innerHTML = "Appended Text";
+            $("body").append(txt);
+            $("P").prepend(txt2);
+        }
+    </script>
+</head>
+<body>
+<p>Click on the button to append text</p>
+<button id="bt1" onclick="appendtext()">Append</button>
+</body>
+</html>
