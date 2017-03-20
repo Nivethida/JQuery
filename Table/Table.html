@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Table using jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div id="div1">
+<table class="tab">
+    <thead>
+  <tr>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Grade</th>
+  </tr>
+    </thead>
+</table>
+</div>
+<script>
+    $(document).ready(function () {
+        var arr = [{"fName":"Joey","lName":"Christ","Grade":1},{"fName":"Jane","lName":"Chae","Grade":2},{"fName":"Ross","lName":"Bing","Grade":3}];
+        var tr;
+        for(var i=0;i<=arr.length;i++){
+            tr=$('<tr/>');
+            tr.append("<td>" + arr[i].fName + "</td>");
+            tr.append("<td>" + arr[i].lName + "</td>");
+            tr.append("<td>" + arr[i].Grade + "</td>")
+            $('.tab').append(tr);
+        }
+    });
+</script>
+</body>
+</html>
