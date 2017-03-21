@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.messagebox/latest/messagebox.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/jquery.messagebox/latest/messagebox.css">
+</head>
+<body>
+<script>
+
+    $(document).ready(function () {
+        $('#but1').click(function () {
+            $.MessageBox("This is msg box").fadeOut(3000);
+        });
+    });
+</script>
+<input type="text" placeholder="Username">
+<br><br>
+<input type="text" placeholder="EmailId">
+<br><br>
+<button id="but1">Submit</button>
+<div id="msgBox" style="display: none">
+    <p>This content is for message box</p>
+</div>
+</body>
+</html>
